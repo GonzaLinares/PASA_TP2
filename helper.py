@@ -68,6 +68,9 @@ def plot_spectrogram(title, w, fs):
     ax.set_ylabel('Frequency (Hz)')
     ax.grid(True)
 
+def getNextPowerOfTwo(len):
+    return 2**(len*2).bit_length()
+
 def get_optimal_params(x, y, M):
     
     N = len(x)
